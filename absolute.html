@@ -15,9 +15,9 @@
 
         }
         .parent {
-            border: 5px solid beige;
+            /*border: 5px solid beige;
             padding: 5px;
-            margin: 20px;
+            margin: 20px; */
             display: inline-block;
         }
 
@@ -35,14 +35,35 @@
             background-color: darkcyan;
             /* NEW */
             position: absolute;
-            : 0px;
+            left: 50px;
             right: 0px;
+            top : 50px;
+            z-index: -1 ;
 
         }
 
         .parent .d-3 {
             background-color: darkorchid;
+            /* NEW */
+            position: absolute;
+            left: 100px;
+            right: 0px;
+            top : 100px;
+            z-index: -2 ;
         }
+        .parent .d-4 {
+            background-color: black;
+            
+            /* NEW */
+            position: absolute;
+            left: 150px;
+            right: 0px;
+            top : 150px;
+            z-index: -3 ;
+        }
+
+
+        /*hw  use position absolute*/
     </style>
 </head>
 <body>
@@ -53,6 +74,8 @@
         <div class="d-1">1</div>
         <div class="d-2">2</div>
         <div class="d-3">3</div>
+        <div class="d-4">4</div>
+
         
     </div>
      <!-- -->
