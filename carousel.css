@@ -1,0 +1,114 @@
+html{
+    height: 100%;
+}
+
+
+body {
+    /*background-color: cadetblue;*/
+    opacity: 0.5;
+    background-image: radial-gradient(rgb(56, 112, 114), rgb(7, 41, 41) );
+    background-repeat : no-repeat;
+    height: 100%;
+   
+    margin: ;
+   
+}
+.carousel {
+    /*border: 10px solid #555;*/
+    width: 500px;
+    height: 700px;
+    /*margin: 100px 50px;*/
+
+
+    position: relative;
+    perspective: 1000px;
+
+    top: 100px;
+    left: 50px;
+
+}
+.carousel .slide {
+    width: 500px;
+    height: 700px;
+    /*border:  1px solid greenyellow; */
+    /*new*/
+    position: absolute;
+    /*transform: rotateY(-25deg) translateZ(30px);*/
+
+    transition: 
+        transform 1s,
+        z-index 1s 0.85s;
+}
+
+.carousel .slide a {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+}
+
+.carousel .slide a::after {
+    content: url(arrow_forward_ios_black_24dp.svg);
+    background-color: #fff9;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 18px;
+    padding: 3px;
+}
+
+
+.carousel .slide:nth-child(1) {
+    /*background-color: hotpink;*/
+    transform: rotateY(-30deg) translateZ(-400px);
+
+    filter: brightness(100%);
+    opacity: 0.5;
+}
+
+.carousel .slide:nth-child(2) {
+    /*background-color: blueviolet;*/
+    transform: rotateY(-30deg) translateZ(-200px);
+
+    filter: brightness(100%);
+    opacity: 0.75;
+}
+
+.carousel .slide:nth-child(3) {
+    /*background-color: blue;*/
+    transform: rotateY(-30deg) translateZ(0px);
+}
+
+/* curousel slide states*/
+
+#state-3:target .slide:nth-child(2) {
+    transform: rotateY(-30deg) translateZ(0px);
+    z-index: 3;
+
+}
+#state-3:target .slide:nth-child(3) {
+    transform: rotateY(-30deg) translateZ(-400px);
+    z-index: 1;
+
+}
+#state-3:target .slide:nth-child(1) {
+    transform: rotateY(-30deg) translateZ(-200px);
+    z-index: 2;
+}
+
+
+
+
+
+ /*hw 
+    finish # state 2  # state 1
+    transform opacity
+
+ hw 
+    gradient all slide div , before
+    position over img
+    linear gradient
+
+ hw 
+  
+
+ */
