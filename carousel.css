@@ -5,12 +5,13 @@ html{
 
 body {
     /*background-color: cadetblue;*/
-    opacity: 0.5;
+    /*opacity: 0.5; */
     background-image: radial-gradient(rgb(56, 112, 114), rgb(7, 41, 41) );
     background-repeat : no-repeat;
     height: 100%;
    
-    margin: ;
+    margin: 0;
+    color: cornsilk;
    
 }
 .carousel {
@@ -48,7 +49,7 @@ body {
 
 .carousel .slide a::after {
     content: url(arrow_forward_ios_black_24dp.svg);
-    background-color: #fff9;
+    background-color: #fff;
     width: 30px;
     height: 30px;
     display: block;
@@ -62,17 +63,15 @@ body {
     transform: rotateY(-30deg) translateZ(-400px);
 
     filter: brightness(100%);
-    opacity: 0.5;
+    opacity: 100%;
 }
-
 .carousel .slide:nth-child(2) {
     /*background-color: blueviolet;*/
     transform: rotateY(-30deg) translateZ(-200px);
 
     filter: brightness(100%);
-    opacity: 0.75;
+    opacity: 100%;
 }
-
 .carousel .slide:nth-child(3) {
     /*background-color: blue;*/
     transform: rotateY(-30deg) translateZ(0px);
@@ -83,7 +82,6 @@ body {
 #state-3:target .slide:nth-child(2) {
     transform: rotateY(-30deg) translateZ(0px);
     z-index: 3;
-
 }
 #state-3:target .slide:nth-child(3) {
     transform: rotateY(-30deg) translateZ(-400px);
@@ -92,7 +90,37 @@ body {
 }
 #state-3:target .slide:nth-child(1) {
     transform: rotateY(-30deg) translateZ(-200px);
+    z-index: 2; 
+}
+
+/* state 1 */
+#state-1:target .slide:nth-child(1) {
+    transform: rotateY(-30deg) translateZ(-400px); 
     z-index: 2;
+}
+
+#state-1:target .slide:nth-child(2) {
+    transform: rotateY(-30deg) translateZ(0px);
+    z-index: 1;
+}
+#state-1:target .slide:nth-child(3) {
+    
+    transform: rotateY(-30deg) translateZ(-200px);
+    z-index: 3;
+}
+
+/* state 2*/
+#state-2:target .slide:nth-child(2) {
+    transform: rotateY(-30deg) translateZ(0px);
+    z-index: 3;
+}
+#state-2:target .slide:nth-child(3) {
+    transform: rotateY(-30deg) translateZ(-400px);
+    z-index: 2;
+}
+#state-2:target .slide:nth-child(1) {
+    transform: rotateY(-30deg) translateZ(-200px);
+    z-index: 1;
 }
 
 
